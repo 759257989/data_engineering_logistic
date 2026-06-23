@@ -1,0 +1,14 @@
+# 数据文件不进 git(太大,且可能含 PII)
+data/
+
+# 密钥
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 系统 / 编辑器
+.DS_Store
+.ipynb_checkpoints/

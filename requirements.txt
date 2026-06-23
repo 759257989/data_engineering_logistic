@@ -1,0 +1,4 @@
+pandas        # 表格数据处理
+pyarrow       # 读写 parquet
+duckdb        # 本地 SQL 引擎(Snowflake 的本地预演)
+openpyxl      # 读 .xlsx
