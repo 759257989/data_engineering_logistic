@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: raw                    # 在模型里用 source('raw', '表名') 引用
+    database: LOGIFLOW
+    schema: RAW
+    tables:
+      - name: dataco_supply_chain
+      - name: nyc_tlc_trips
+      - name: taxi_zones

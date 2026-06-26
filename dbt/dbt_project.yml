@@ -1,0 +1,11 @@
+name: 'logiflow'
+version: '1.0'
+profile: 'logiflow'          # 用哪个连接配置(对应下面 profiles.yml 里的名字)
+model-paths: ["models"]
+
+models:
+  logiflow:
+    staging:
+      +materialized: view    # staging 层都建成视图(省空间)
+    marts:
+      +materialized: table   # marts 层都建成表(查得快)

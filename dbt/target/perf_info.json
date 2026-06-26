@@ -1,0 +1,57 @@
+{
+    "path_count": 217,
+    "parsed_path_count": 217,
+    "static_analysis_path_count": 10,
+    "static_analysis_parsed_path_count": 2,
+    "is_partial_parse_enabled": false,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.031559916911646724,
+    "load_macros_elapsed": 0.44134608295280486,
+    "parse_project_elapsed": 0.39370779099408537,
+    "patch_sources_elapsed": 0.010971374926157296,
+    "process_manifest_elapsed": 0.02185941708739847,
+    "load_all_elapsed": 0.9380503329448402,
+    "projects": [
+        {
+            "project_name": "logiflow",
+            "elapsed": 0.38531445898115635,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.16545154200866818,
+                    "parsed_path_count": 10
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.2171791250584647,
+                    "parsed_path_count": 2
+                }
+            ],
+            "parsed_path_count": 12
+        },
+        {
+            "project_name": "dbt_snowflake",
+            "elapsed": 0.0032695839181542397,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.0025472500128671527,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.00014054204802960157,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        },
+        {
+            "project_name": "dbt_utils",
+            "elapsed": 0.0024703750386834145,
+            "parsers": [],
+            "parsed_path_count": 0
+        }
+    ]
+}

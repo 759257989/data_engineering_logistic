@@ -1,0 +1,76 @@
+version: 2
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_key
+        tests: [unique, not_null]      # 代理键必须唯一且非空
+      - name: customer_id
+        tests: [unique, not_null]
+  - name: dim_products
+    columns:
+      - name: product_key
+        tests: [unique, not_null]
+      - name: product_card_id
+        tests: [unique, not_null]
+  - name: dim_zones
+    columns:
+      - name: zone_key
+        tests: [unique, not_null]
+      - name: location_id
+        tests: [unique, not_null]
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests: [unique, not_null]
+      - name: date_day
+        tests: [unique, not_null]
+  - name: fct_order_items
+    columns:
+      - name: order_item_id
+        tests: [unique, not_null]
+      - name: customer_key
+        tests:
+          - relationships:               # 外键完整性:每个 customer_key 都要能在 dim_customers 找到
+              arguments:
+                to: ref('dim_customers')
+                field: customer_key
+      - name: product_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_key
+      - name: order_date_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+  - name: fct_shipments
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: delivery_status
+        tests:
+          - accepted_values:             # 枚举值检查:只能是这四种
+              arguments:
+                values: ['Advance shipping', 'Late delivery', 'Shipping canceled', 'Shipping on time']
+      - name: shipping_mode
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['First Class', 'Same Day', 'Second Class', 'Standard Class']
+      - name: customer_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_key
+  - name: fct_trips
+    columns:
+      - name: pickup_zone_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_zones')
+                field: zone_key
