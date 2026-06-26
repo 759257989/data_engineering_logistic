@@ -2,3 +2,6 @@ pandas        # 表格数据处理
 pyarrow       # 读写 parquet
 duckdb        # 本地 SQL 引擎(Snowflake 的本地预演)
 openpyxl      # 读 .xlsx
+boto3                  # AWS 官方 Python SDK,用来传文件到 S3
+snowflake-connector-python   # 用 Python 连 Snowflake 跑 SQL
+python-dotenv

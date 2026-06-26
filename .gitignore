@@ -12,3 +12,5 @@ __pycache__/
 # 系统 / 编辑器
 .DS_Store
 .ipynb_checkpoints/
+
+phase/
