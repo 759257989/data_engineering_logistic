@@ -3194,3 +3194,1696 @@ KeyboardInterrupt
 [0m18:25:36.522937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099de290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098e0ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ae74350>]}
 [0m18:25:36.524495 [debug] [MainThread]: Flushing usage events
 [0m18:25:36.810122 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:03:08.405685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11021f050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103b77d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103b7f90>]}
+
+
+============================== 13:03:08.409873 | c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf ==============================
+[0m13:03:08.409873 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:03:08.410274 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'log_path': '/Users/yuwang/Desktop/logistics_data/dbt/logs', 'use_colors': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'invocation_command': 'dbt build', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'printer_width': '80', 'debug': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'static_parser': 'True', 'profiles_dir': '/Users/yuwang/.dbt', 'indirect_selection': 'eager', 'target_path': 'None'}
+[0m13:03:09.096692 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:03:09.097076 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:03:09.097282 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:03:09.192420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102e60050>]}
+[0m13:03:09.223535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10672e610>]}
+[0m13:03:09.224448 [info ] [MainThread]: Registered adapter: snowflake=1.11.6
+[0m13:03:09.321374 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:03:09.421103 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:03:09.421455 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:03:09.421659 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:03:09.449912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1214ca350>]}
+[0m13:03:09.505093 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/yuwang/Desktop/logistics_data/dbt/target/manifest.json
+[0m13:03:09.507351 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/yuwang/Desktop/logistics_data/dbt/target/semantic_manifest.json
+[0m13:03:09.524707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121693ed0>]}
+[0m13:03:09.525144 [info ] [MainThread]: Found 10 models, 27 data tests, 3 sources, 653 macros
+[0m13:03:09.527235 [info ] [MainThread]: 
+[0m13:03:09.527539 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:03:09.527746 [info ] [MainThread]: 
+[0m13:03:09.528058 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:03:09.530743 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LOGIFLOW'
+[0m13:03:09.589472 [debug] [ThreadPool]: Using snowflake connection "list_LOGIFLOW"
+[0m13:03:09.589789 [debug] [ThreadPool]: On list_LOGIFLOW: show terse schemas in database LOGIFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "connection_name": "list_LOGIFLOW"} */
+[0m13:03:09.589993 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:03:10.652779 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.063 seconds
+[0m13:03:10.654531 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_LOGIFLOW, now list_LOGIFLOW_DBT_DEV)
+[0m13:03:10.661502 [debug] [ThreadPool]: Using snowflake connection "list_LOGIFLOW_DBT_DEV"
+[0m13:03:10.661832 [debug] [ThreadPool]: On list_LOGIFLOW_DBT_DEV: show objects in LOGIFLOW.DBT_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "connection_name": "list_LOGIFLOW_DBT_DEV"} */;
+[0m13:03:11.037389 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.375 seconds
+[0m13:03:11.041249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121b19050>]}
+[0m13:03:11.044669 [debug] [Thread-2 (]: Began running node model.logiflow.dim_date
+[0m13:03:11.045083 [debug] [Thread-3 (]: Began running node model.logiflow.stg_dataco__order_items
+[0m13:03:11.045420 [debug] [Thread-4 (]: Began running node model.logiflow.stg_nyc__trips
+[0m13:03:11.045678 [debug] [Thread-5 (]: Began running node model.logiflow.stg_taxi__zones
+[0m13:03:11.046309 [info ] [Thread-2 (]: 1 of 37 START sql table model DBT_DEV.dim_date ................................. [RUN]
+[0m13:03:11.046921 [info ] [Thread-3 (]: 2 of 37 START sql view model DBT_DEV.stg_dataco__order_items ................... [RUN]
+[0m13:03:11.047472 [info ] [Thread-4 (]: 3 of 37 START sql view model DBT_DEV.stg_nyc__trips ............................ [RUN]
+[0m13:03:11.047994 [info ] [Thread-5 (]: 4 of 37 START sql view model DBT_DEV.stg_taxi__zones ........................... [RUN]
+[0m13:03:11.048425 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_LOGIFLOW_DBT_DEV, now model.logiflow.dim_date)
+[0m13:03:11.048856 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.logiflow.stg_dataco__order_items'
+[0m13:03:11.049236 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.logiflow.stg_nyc__trips'
+[0m13:03:11.049575 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.logiflow.stg_taxi__zones'
+[0m13:03:11.049864 [debug] [Thread-2 (]: Began compiling node model.logiflow.dim_date
+[0m13:03:11.050187 [debug] [Thread-3 (]: Began compiling node model.logiflow.stg_dataco__order_items
+[0m13:03:11.050470 [debug] [Thread-4 (]: Began compiling node model.logiflow.stg_nyc__trips
+[0m13:03:11.050760 [debug] [Thread-5 (]: Began compiling node model.logiflow.stg_taxi__zones
+[0m13:03:11.063340 [debug] [Thread-2 (]: Using snowflake connection "model.logiflow.dim_date"
+[0m13:03:11.066565 [debug] [Thread-3 (]: Writing injected SQL for node "model.logiflow.stg_dataco__order_items"
+[0m13:03:11.132001 [debug] [Thread-4 (]: Writing injected SQL for node "model.logiflow.stg_nyc__trips"
+[0m13:03:11.133612 [debug] [Thread-5 (]: Writing injected SQL for node "model.logiflow.stg_taxi__zones"
+[0m13:03:11.133896 [debug] [Thread-2 (]: On model.logiflow.dim_date: select datediff(
+        day,
+        cast('2015-01-01' as date),
+        cast('2026-01-01' as date)
+        )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.dim_date"} */
+[0m13:03:11.135664 [debug] [Thread-3 (]: Began executing node model.logiflow.stg_dataco__order_items
+[0m13:03:11.149063 [debug] [Thread-5 (]: Began executing node model.logiflow.stg_taxi__zones
+[0m13:03:11.150789 [debug] [Thread-3 (]: Writing runtime sql for node "model.logiflow.stg_dataco__order_items"
+[0m13:03:11.151040 [debug] [Thread-4 (]: Began executing node model.logiflow.stg_nyc__trips
+[0m13:03:11.152885 [debug] [Thread-5 (]: Writing runtime sql for node "model.logiflow.stg_taxi__zones"
+[0m13:03:11.154754 [debug] [Thread-4 (]: Writing runtime sql for node "model.logiflow.stg_nyc__trips"
+[0m13:03:11.155978 [debug] [Thread-3 (]: Using snowflake connection "model.logiflow.stg_dataco__order_items"
+[0m13:03:11.156324 [debug] [Thread-3 (]: On model.logiflow.stg_dataco__order_items: create or replace   view LOGIFLOW.DBT_DEV.stg_dataco__order_items
+  
+  
+  
+  
+  as (
+    with source as (
+    select * from LOGIFLOW.RAW.dataco_supply_chain
+),
+renamed as (
+    -- 说明:RAW 表由 INFER_SCHEMA 从 Parquet 自动建表,列名是"小写、区分大小写"的,
+    -- 必须用双引号 "..." 引用源列;输出别名不加引号,这样下游 marts 用的就是干净的大写列名。
+    select
+        "order_item_id"                                                      as order_item_id,
+        "order_id"                                                          as order_id,
+        "customer_id"                                                       as customer_id,
+        "product_card_id"                                                   as product_card_id,
+        "category_id"                                                       as category_id,
+        "category_name"                                                     as category_name,
+        -- DataCo 的日期是 '1/31/2018 22:56' 这种字符串,在这里解析成真正的时间戳
+        to_timestamp_ntz("order_date_date_orders", 'MM/DD/YYYY HH24:MI')    as order_ts,
+        to_timestamp_ntz("shipping_date_date_orders", 'MM/DD/YYYY HH24:MI') as shipping_ts,
+        "days_for_shipping_real"::int                                       as days_shipping_real,
+        "days_for_shipment_scheduled"::int                                  as days_shipping_scheduled,
+        "delivery_status"                                                   as delivery_status,
+        "late_delivery_risk"::int                                          as late_delivery_risk,
+        "shipping_mode"                                                     as shipping_mode,
+        "sales"::float                                                      as sales,
+        "order_item_quantity"::int                                         as quantity,
+        "order_item_discount"::float                                       as discount,
+        "order_profit_per_order"::float                                    as order_profit,
+        "customer_segment"                                                  as customer_segment,
+        "customer_city"                                                     as customer_city,
+        "customer_state"                                                    as customer_state,
+        "customer_country"                                                  as customer_country,
+        "product_name"                                                      as product_name,
+        "market"                                                            as market,
+        "order_region"                                                      as order_region,
+        "order_country"                                                     as order_country,
+        "order_city"                                                        as order_city
+        -- 注意:customer_email / customer_password / customer_fname / customer_lname
+        -- / customer_street 这些隐私字段(PII)在这里被故意不选,等于在进入分析层前就脱敏
+    from source
+)
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.stg_dataco__order_items"} */;
+[0m13:03:11.156617 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:03:11.158118 [debug] [Thread-4 (]: Using snowflake connection "model.logiflow.stg_nyc__trips"
+[0m13:03:11.158590 [debug] [Thread-5 (]: Using snowflake connection "model.logiflow.stg_taxi__zones"
+[0m13:03:11.158886 [debug] [Thread-4 (]: On model.logiflow.stg_nyc__trips: create or replace   view LOGIFLOW.DBT_DEV.stg_nyc__trips
+  
+  
+  
+  
+  as (
+    with source as (
+    select * from LOGIFLOW.RAW.nyc_tlc_trips
+),
+renamed as (
+    -- RAW 列名是小写、区分大小写,源列必须用双引号引用。
+    -- tpep_pickup/dropoff_datetime 在 RAW 里是"微秒级 epoch"整数(如 1709252331000000),
+    -- 不能直接 ::timestamp_ntz(会当成秒,年份溢出);用 to_timestamp_ntz(x, 6) 按微秒解析。
+    select
+        "vendor_id"::int                              as vendor_id,
+        to_timestamp_ntz("tpep_pickup_datetime", 6)   as pickup_ts,
+        to_timestamp_ntz("tpep_dropoff_datetime", 6)  as dropoff_ts,
+        "pu_location_id"::int                         as pickup_location_id,
+        "do_location_id"::int                         as dropoff_location_id,
+        "trip_distance"::float                        as trip_distance_miles,
+        "fare_amount"::float                          as fare_amount,
+        "tolls_amount"::float                         as tolls_amount,
+        "congestion_surcharge"::float                 as congestion_surcharge,
+        "total_amount"::float                         as total_amount,
+        "passenger_count"::int                        as passenger_count
+    from source
+),
+cleaned as (
+    select
+        -- NYC 数据没有行程 ID,用几个(已清洗的)字段哈希出一个稳定的代理 trip_id
+        md5(cast(coalesce(cast(pickup_ts as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(dropoff_ts as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(pickup_location_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(dropoff_location_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(trip_distance_miles as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(fare_amount as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as trip_id,
+        vendor_id,
+        pickup_ts,
+        dropoff_ts,
+        pickup_location_id,
+        dropoff_location_id,
+        trip_distance_miles,
+        -- 用上下车时间算出行程时长(分钟)
+        datediff(minute, pickup_ts, dropoff_ts) as trip_duration_minutes,
+        fare_amount,
+        tolls_amount,
+        congestion_surcharge,
+        total_amount,
+        passenger_count
+    from renamed
+    -- 这里就是 Phase 0 发现的脏数据"治疗现场":把零距离、负车费、
+    -- 上车晚于下车、以及不在 2024 年 1-3 月的异常行,全部过滤掉
+    where trip_distance_miles > 0
+      and fare_amount >= 0
+      and dropoff_ts > pickup_ts
+      and pickup_ts >= '2024-01-01'::timestamp_ntz
+      and pickup_ts <  '2024-04-01'::timestamp_ntz
+)
+select * from cleaned
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.stg_nyc__trips"} */;
+[0m13:03:11.159242 [debug] [Thread-5 (]: On model.logiflow.stg_taxi__zones: create or replace   view LOGIFLOW.DBT_DEV.stg_taxi__zones
+  
+  
+  
+  
+  as (
+    with source as (
+    select * from LOGIFLOW.RAW.taxi_zones
+)
+-- RAW 列名是小写、区分大小写,源列必须用双引号引用;输出别名保持不带引号。
+select
+    "location_id"::int as location_id,
+    "borough"          as borough,
+    "zone"             as zone,
+    "service_zone"     as service_zone
+from source
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.stg_taxi__zones"} */;
+[0m13:03:11.159561 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:03:11.159833 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:03:11.394207 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.260 seconds
+[0m13:03:11.404167 [debug] [Thread-2 (]: Writing injected SQL for node "model.logiflow.dim_date"
+[0m13:03:11.405156 [debug] [Thread-2 (]: Began executing node model.logiflow.dim_date
+[0m13:03:11.420199 [debug] [Thread-2 (]: Writing runtime sql for node "model.logiflow.dim_date"
+[0m13:03:11.423642 [debug] [Thread-2 (]: Using snowflake connection "model.logiflow.dim_date"
+[0m13:03:11.424005 [debug] [Thread-2 (]: On model.logiflow.dim_date: create or replace transient table LOGIFLOW.DBT_DEV.dim_date
+    
+    
+    
+    as (with spine as (
+    -- date_spine 宏:自动生成一段连续日期(这里 2015 到 2026,够覆盖订单和行程)
+    
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+     + 
+    
+    p6.generated_number * power(2, 6)
+     + 
+    
+    p7.generated_number * power(2, 7)
+     + 
+    
+    p8.generated_number * power(2, 8)
+     + 
+    
+    p9.generated_number * power(2, 9)
+     + 
+    
+    p10.generated_number * power(2, 10)
+     + 
+    
+    p11.generated_number * power(2, 11)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+     cross join 
+    
+    p as p6
+     cross join 
+    
+    p as p7
+     cross join 
+    
+    p as p8
+     cross join 
+    
+    p as p9
+     cross join 
+    
+    p as p10
+     cross join 
+    
+    p as p11
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 4018
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    dateadd(
+        day,
+        row_number() over (order by generated_number) - 1,
+        cast('2015-01-01' as date)
+        )
+
+
+    ) as date_day
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_day <= cast('2026-01-01' as date)
+
+)
+
+select * from filtered
+
+
+)
+select
+    md5(cast(coalesce(cast(cast(date_day as date) as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as date_key,
+    cast(date_day as date)        as date_day,
+    year(date_day)                as year,
+    quarter(date_day)             as quarter,
+    month(date_day)               as month,
+    monthname(date_day)           as month_name,
+    day(date_day)                 as day_of_month,
+    dayofweek(date_day)           as day_of_week,
+    case when dayofweek(date_day) in (0, 6) then true else false end as is_weekend
+from spine
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.dim_date"} */;
+[0m13:03:12.197233 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.040 seconds
+[0m13:03:12.213697 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1214dd010>]}
+[0m13:03:12.214321 [info ] [Thread-3 (]: 2 of 37 OK created sql view model DBT_DEV.stg_dataco__order_items .............. [[32mSUCCESS 1[0m in 1.16s]
+[0m13:03:12.215039 [debug] [Thread-3 (]: Finished running node model.logiflow.stg_dataco__order_items
+[0m13:03:12.215686 [debug] [Thread-3 (]: Began running node model.logiflow.dim_customers
+[0m13:03:12.216095 [info ] [Thread-3 (]: 5 of 37 START sql table model DBT_DEV.dim_customers ............................ [RUN]
+[0m13:03:12.216550 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.logiflow.stg_dataco__order_items, now model.logiflow.dim_customers)
+[0m13:03:12.216871 [debug] [Thread-3 (]: Began compiling node model.logiflow.dim_customers
+[0m13:03:12.220011 [debug] [Thread-3 (]: Writing injected SQL for node "model.logiflow.dim_customers"
+[0m13:03:12.220602 [debug] [Thread-3 (]: Began executing node model.logiflow.dim_customers
+[0m13:03:12.222740 [debug] [Thread-3 (]: Writing runtime sql for node "model.logiflow.dim_customers"
+[0m13:03:12.223665 [debug] [Thread-3 (]: Using snowflake connection "model.logiflow.dim_customers"
+[0m13:03:12.223958 [debug] [Thread-3 (]: On model.logiflow.dim_customers: create or replace transient table LOGIFLOW.DBT_DEV.dim_customers
+    
+    
+    
+    as (with ranked as (
+    select
+        customer_id,
+        customer_segment,
+        customer_city,
+        customer_state,
+        customer_country,
+        -- 一个客户在源数据里出现很多次(每个订单行一次),
+        -- 用 row_number 给每个客户只挑一行(取最近一单的信息)
+        row_number() over (partition by customer_id order by order_ts desc) as rn
+    from LOGIFLOW.DBT_DEV.stg_dataco__order_items
+)
+select
+    md5(cast(coalesce(cast(customer_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as customer_key,  -- 代理键
+    customer_id,
+    customer_segment,
+    customer_city,
+    customer_state,
+    customer_country
+from ranked
+where rn = 1     -- 每个客户只保留一行,保证粒度=一个客户
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.dim_customers"} */;
+[0m13:03:12.621400 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.461 seconds
+[0m13:03:12.622027 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.462 seconds
+[0m13:03:12.624052 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121c5e090>]}
+[0m13:03:12.625683 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121c67350>]}
+[0m13:03:12.626160 [info ] [Thread-5 (]: 4 of 37 OK created sql view model DBT_DEV.stg_taxi__zones ...................... [[32mSUCCESS 1[0m in 1.57s]
+[0m13:03:12.626572 [info ] [Thread-4 (]: 3 of 37 OK created sql view model DBT_DEV.stg_nyc__trips ....................... [[32mSUCCESS 1[0m in 1.58s]
+[0m13:03:12.626946 [debug] [Thread-5 (]: Finished running node model.logiflow.stg_taxi__zones
+[0m13:03:12.627276 [debug] [Thread-4 (]: Finished running node model.logiflow.stg_nyc__trips
+[0m13:03:12.627555 [debug] [Thread-5 (]: Began running node model.logiflow.dim_products
+[0m13:03:12.627948 [debug] [Thread-4 (]: Began running node model.logiflow.fct_order_items
+[0m13:03:12.628390 [info ] [Thread-5 (]: 6 of 37 START sql table model DBT_DEV.dim_products ............................. [RUN]
+[0m13:03:12.628745 [info ] [Thread-4 (]: 7 of 37 START sql table model DBT_DEV.fct_order_items .......................... [RUN]
+[0m13:03:12.629097 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.logiflow.stg_taxi__zones, now model.logiflow.dim_products)
+[0m13:03:12.629405 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.logiflow.stg_nyc__trips, now model.logiflow.fct_order_items)
+[0m13:03:12.629682 [debug] [Thread-5 (]: Began compiling node model.logiflow.dim_products
+[0m13:03:12.629945 [debug] [Thread-4 (]: Began compiling node model.logiflow.fct_order_items
+[0m13:03:12.633078 [debug] [Thread-5 (]: Writing injected SQL for node "model.logiflow.dim_products"
+[0m13:03:12.638006 [debug] [Thread-4 (]: Writing injected SQL for node "model.logiflow.fct_order_items"
+[0m13:03:12.638954 [debug] [Thread-4 (]: Began executing node model.logiflow.fct_order_items
+[0m13:03:12.639196 [debug] [Thread-5 (]: Began executing node model.logiflow.dim_products
+[0m13:03:12.641242 [debug] [Thread-4 (]: Writing runtime sql for node "model.logiflow.fct_order_items"
+[0m13:03:12.643201 [debug] [Thread-5 (]: Writing runtime sql for node "model.logiflow.dim_products"
+[0m13:03:12.644178 [debug] [Thread-4 (]: Using snowflake connection "model.logiflow.fct_order_items"
+[0m13:03:12.644773 [debug] [Thread-5 (]: Using snowflake connection "model.logiflow.dim_products"
+[0m13:03:12.645134 [debug] [Thread-4 (]: On model.logiflow.fct_order_items: create or replace transient table LOGIFLOW.DBT_DEV.fct_order_items
+    
+    
+    
+    as (with items as (
+    select * from LOGIFLOW.DBT_DEV.stg_dataco__order_items
+)
+select
+    order_item_id,                                                              -- 主键
+    md5(cast(coalesce(cast(customer_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT))        as customer_key,    -- 外键 -> dim_customers
+    md5(cast(coalesce(cast(product_card_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT))    as product_key,     -- 外键 -> dim_products
+    md5(cast(coalesce(cast(cast(order_ts as date) as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_date_key, -- 外键 -> dim_date
+    order_id,
+    order_ts,
+    sales,            -- 以下都是"度量":可以加总、求平均
+    quantity,
+    discount,
+    order_profit
+from items
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.fct_order_items"} */;
+[0m13:03:12.645435 [debug] [Thread-5 (]: On model.logiflow.dim_products: create or replace transient table LOGIFLOW.DBT_DEV.dim_products
+    
+    
+    
+    as (with ranked as (
+    select
+        product_card_id,
+        product_name,
+        category_id,
+        category_name,
+        row_number() over (partition by product_card_id order by order_ts desc) as rn
+    from LOGIFLOW.DBT_DEV.stg_dataco__order_items
+)
+select
+    md5(cast(coalesce(cast(product_card_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as product_key,
+    product_card_id,
+    product_name,
+    category_id,
+    category_name
+from ranked
+where rn = 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.dim_products"} */;
+[0m13:03:13.438728 [debug] [Thread-2 (]: SQL status: SUCCESS 4018 in 2.014 seconds
+[0m13:03:13.442781 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10623df10>]}
+[0m13:03:13.443901 [info ] [Thread-2 (]: 1 of 37 OK created sql table model DBT_DEV.dim_date ............................ [[32mSUCCESS 4018[0m in 2.39s]
+[0m13:03:13.444634 [debug] [Thread-2 (]: Finished running node model.logiflow.dim_date
+[0m13:03:13.445187 [debug] [Thread-2 (]: Began running node model.logiflow.fct_shipments
+[0m13:03:13.446346 [info ] [Thread-2 (]: 8 of 37 START sql table model DBT_DEV.fct_shipments ............................ [RUN]
+[0m13:03:13.447057 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.logiflow.dim_date, now model.logiflow.fct_shipments)
+[0m13:03:13.447720 [debug] [Thread-2 (]: Began compiling node model.logiflow.fct_shipments
+[0m13:03:13.455023 [debug] [Thread-2 (]: Writing injected SQL for node "model.logiflow.fct_shipments"
+[0m13:03:13.456074 [debug] [Thread-2 (]: Began executing node model.logiflow.fct_shipments
+[0m13:03:13.459575 [debug] [Thread-2 (]: Writing runtime sql for node "model.logiflow.fct_shipments"
+[0m13:03:13.461876 [debug] [Thread-2 (]: Using snowflake connection "model.logiflow.fct_shipments"
+[0m13:03:13.462393 [debug] [Thread-2 (]: On model.logiflow.fct_shipments: create or replace transient table LOGIFLOW.DBT_DEV.fct_shipments
+    
+    
+    
+    as (with ranked as (
+    select
+        order_id,
+        customer_id,
+        order_ts,
+        shipping_ts,
+        days_shipping_real,
+        days_shipping_scheduled,
+        delivery_status,
+        late_delivery_risk,
+        shipping_mode,
+        -- 发货相关字段在"订单"粒度上是一致的,每个订单挑一行即可
+        row_number() over (partition by order_id order by order_item_id) as rn
+    from LOGIFLOW.DBT_DEV.stg_dataco__order_items
+)
+select
+    order_id,
+    md5(cast(coalesce(cast(customer_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT))        as customer_key,
+    md5(cast(coalesce(cast(cast(order_ts as date) as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_date_key,
+    order_ts,
+    shipping_ts,
+    days_shipping_real,
+    days_shipping_scheduled,
+    (days_shipping_real - days_shipping_scheduled) as delay_days,   -- 实际比计划多花几天
+    case when days_shipping_real > days_shipping_scheduled then true else false end as is_late,
+    delivery_status,
+    late_delivery_risk,
+    shipping_mode
+from ranked
+where rn = 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.fct_shipments"} */;
+[0m13:03:13.758428 [debug] [Thread-5 (]: SQL status: SUCCESS 118 in 1.112 seconds
+[0m13:03:13.762059 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121d50510>]}
+[0m13:03:13.762811 [info ] [Thread-5 (]: 6 of 37 OK created sql table model DBT_DEV.dim_products ........................ [[32mSUCCESS 118[0m in 1.13s]
+[0m13:03:13.763272 [debug] [Thread-5 (]: Finished running node model.logiflow.dim_products
+[0m13:03:13.763620 [debug] [Thread-5 (]: Began running node model.logiflow.dim_zones
+[0m13:03:13.764242 [info ] [Thread-5 (]: 9 of 37 START sql table model DBT_DEV.dim_zones ................................ [RUN]
+[0m13:03:13.764709 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.logiflow.dim_products, now model.logiflow.dim_zones)
+[0m13:03:13.765096 [debug] [Thread-5 (]: Began compiling node model.logiflow.dim_zones
+[0m13:03:13.768422 [debug] [Thread-5 (]: Writing injected SQL for node "model.logiflow.dim_zones"
+[0m13:03:13.769340 [debug] [Thread-5 (]: Began executing node model.logiflow.dim_zones
+[0m13:03:13.771917 [debug] [Thread-5 (]: Writing runtime sql for node "model.logiflow.dim_zones"
+[0m13:03:13.772716 [debug] [Thread-5 (]: Using snowflake connection "model.logiflow.dim_zones"
+[0m13:03:13.773029 [debug] [Thread-5 (]: On model.logiflow.dim_zones: create or replace transient table LOGIFLOW.DBT_DEV.dim_zones
+    
+    
+    
+    as (select
+    md5(cast(coalesce(cast(location_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as zone_key,
+    location_id,
+    borough,
+    zone,
+    service_zone
+from LOGIFLOW.DBT_DEV.stg_taxi__zones
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.dim_zones"} */;
+[0m13:03:14.012275 [debug] [Thread-3 (]: SQL status: SUCCESS 20652 in 1.788 seconds
+[0m13:03:14.016824 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107038d50>]}
+[0m13:03:14.018039 [info ] [Thread-3 (]: 5 of 37 OK created sql table model DBT_DEV.dim_customers ....................... [[32mSUCCESS 20652[0m in 1.80s]
+[0m13:03:14.018993 [debug] [Thread-3 (]: Finished running node model.logiflow.dim_customers
+[0m13:03:14.019556 [debug] [Thread-3 (]: Began running node model.logiflow.fct_trips
+[0m13:03:14.020379 [info ] [Thread-3 (]: 10 of 37 START sql table model DBT_DEV.fct_trips ............................... [RUN]
+[0m13:03:14.020955 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.logiflow.dim_customers, now model.logiflow.fct_trips)
+[0m13:03:14.021427 [debug] [Thread-3 (]: Began compiling node model.logiflow.fct_trips
+[0m13:03:14.030551 [debug] [Thread-3 (]: Writing injected SQL for node "model.logiflow.fct_trips"
+[0m13:03:14.031700 [debug] [Thread-3 (]: Began executing node model.logiflow.fct_trips
+[0m13:03:14.034866 [debug] [Thread-3 (]: Writing runtime sql for node "model.logiflow.fct_trips"
+[0m13:03:14.036724 [debug] [Thread-3 (]: Using snowflake connection "model.logiflow.fct_trips"
+[0m13:03:14.037219 [debug] [Thread-3 (]: On model.logiflow.fct_trips: create or replace transient table LOGIFLOW.DBT_DEV.fct_trips
+    
+    
+    
+    as (with trips as (
+    select * from LOGIFLOW.DBT_DEV.stg_nyc__trips
+)
+select
+    trip_id,
+    md5(cast(coalesce(cast(pickup_location_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT))  as pickup_zone_key,   -- 外键 -> dim_zones
+    md5(cast(coalesce(cast(dropoff_location_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as dropoff_zone_key,
+    md5(cast(coalesce(cast(cast(pickup_ts as date) as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as pickup_date_key,
+    pickup_ts,
+    dropoff_ts,
+    pickup_location_id,
+    dropoff_location_id,
+    trip_distance_miles,
+    trip_duration_minutes,
+    fare_amount,
+    total_amount,
+    -- 每英里成本:用车费除以距离(距离为 0 的已在 staging 过滤,这里再防一手)
+    case when trip_distance_miles > 0 then round(fare_amount / trip_distance_miles, 2) else null end as cost_per_mile
+from trips
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "model.logiflow.fct_trips"} */;
+[0m13:03:14.588539 [debug] [Thread-4 (]: SQL status: SUCCESS 180519 in 1.943 seconds
+[0m13:03:14.591439 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121524790>]}
+[0m13:03:14.591976 [info ] [Thread-4 (]: 7 of 37 OK created sql table model DBT_DEV.fct_order_items ..................... [[32mSUCCESS 180519[0m in 1.96s]
+[0m13:03:14.592361 [debug] [Thread-4 (]: Finished running node model.logiflow.fct_order_items
+[0m13:03:14.592653 [debug] [Thread-4 (]: Began running node test.logiflow.not_null_dim_date_date_day.e3f312efb2
+[0m13:03:14.593278 [info ] [Thread-4 (]: 11 of 37 START test not_null_dim_date_date_day ................................. [RUN]
+[0m13:03:14.593610 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.logiflow.fct_order_items, now test.logiflow.not_null_dim_date_date_day.e3f312efb2)
+[0m13:03:14.593880 [debug] [Thread-4 (]: Began compiling node test.logiflow.not_null_dim_date_date_day.e3f312efb2
+[0m13:03:14.604911 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.not_null_dim_date_date_day.e3f312efb2"
+[0m13:03:14.605854 [debug] [Thread-4 (]: Began executing node test.logiflow.not_null_dim_date_date_day.e3f312efb2
+[0m13:03:14.621021 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.not_null_dim_date_date_day.e3f312efb2"
+[0m13:03:14.622312 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.not_null_dim_date_date_day.e3f312efb2"
+[0m13:03:14.622721 [debug] [Thread-4 (]: On test.logiflow.not_null_dim_date_date_day.e3f312efb2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_day
+from LOGIFLOW.DBT_DEV.dim_date
+where date_day is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_date_date_day.e3f312efb2"} */
+[0m13:03:14.705034 [debug] [Thread-5 (]: SQL status: SUCCESS 265 in 0.932 seconds
+[0m13:03:14.709878 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1213226d0>]}
+[0m13:03:14.710802 [info ] [Thread-5 (]: 9 of 37 OK created sql table model DBT_DEV.dim_zones ........................... [[32mSUCCESS 265[0m in 0.95s]
+[0m13:03:14.711563 [debug] [Thread-2 (]: SQL status: SUCCESS 65752 in 1.249 seconds
+[0m13:03:14.711969 [debug] [Thread-5 (]: Finished running node model.logiflow.dim_zones
+[0m13:03:14.713498 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1213258d0>]}
+[0m13:03:14.713828 [debug] [Thread-5 (]: Began running node test.logiflow.not_null_dim_date_date_key.881d0a31b6
+[0m13:03:14.714393 [info ] [Thread-2 (]: 8 of 37 OK created sql table model DBT_DEV.fct_shipments ....................... [[32mSUCCESS 65752[0m in 1.27s]
+[0m13:03:14.714695 [info ] [Thread-5 (]: 12 of 37 START test not_null_dim_date_date_key ................................. [RUN]
+[0m13:03:14.715051 [debug] [Thread-2 (]: Finished running node model.logiflow.fct_shipments
+[0m13:03:14.715329 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.logiflow.dim_zones, now test.logiflow.not_null_dim_date_date_key.881d0a31b6)
+[0m13:03:14.715617 [debug] [Thread-2 (]: Began running node test.logiflow.unique_dim_date_date_day.d56fd19199
+[0m13:03:14.715984 [debug] [Thread-5 (]: Began compiling node test.logiflow.not_null_dim_date_date_key.881d0a31b6
+[0m13:03:14.716213 [info ] [Thread-2 (]: 13 of 37 START test unique_dim_date_date_day ................................... [RUN]
+[0m13:03:14.719217 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.not_null_dim_date_date_key.881d0a31b6"
+[0m13:03:14.721102 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.logiflow.fct_shipments, now test.logiflow.unique_dim_date_date_day.d56fd19199)
+[0m13:03:14.722138 [debug] [Thread-2 (]: Began compiling node test.logiflow.unique_dim_date_date_day.d56fd19199
+[0m13:03:14.724308 [debug] [Thread-5 (]: Began executing node test.logiflow.not_null_dim_date_date_key.881d0a31b6
+[0m13:03:14.729913 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.unique_dim_date_date_day.d56fd19199"
+[0m13:03:14.731860 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.not_null_dim_date_date_key.881d0a31b6"
+[0m13:03:14.732534 [debug] [Thread-2 (]: Began executing node test.logiflow.unique_dim_date_date_day.d56fd19199
+[0m13:03:14.735280 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.unique_dim_date_date_day.d56fd19199"
+[0m13:03:14.735733 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.not_null_dim_date_date_key.881d0a31b6"
+[0m13:03:14.736079 [debug] [Thread-5 (]: On test.logiflow.not_null_dim_date_date_key.881d0a31b6: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from LOGIFLOW.DBT_DEV.dim_date
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_date_date_key.881d0a31b6"} */
+[0m13:03:14.736685 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.unique_dim_date_date_day.d56fd19199"
+[0m13:03:14.736929 [debug] [Thread-2 (]: On test.logiflow.unique_dim_date_date_day.d56fd19199: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_day as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_date
+where date_day is not null
+group by date_day
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_date_date_day.d56fd19199"} */
+[0m13:03:14.925696 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.189 seconds
+[0m13:03:14.931405 [info ] [Thread-5 (]: 12 of 37 PASS not_null_dim_date_date_key ....................................... [[32mPASS[0m in 0.22s]
+[0m13:03:14.932091 [debug] [Thread-5 (]: Finished running node test.logiflow.not_null_dim_date_date_key.881d0a31b6
+[0m13:03:14.932592 [debug] [Thread-5 (]: Began running node test.logiflow.unique_dim_date_date_key.0869fd48f9
+[0m13:03:14.933294 [info ] [Thread-5 (]: 14 of 37 START test unique_dim_date_date_key ................................... [RUN]
+[0m13:03:14.934115 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_date_date_key.881d0a31b6, now test.logiflow.unique_dim_date_date_key.0869fd48f9)
+[0m13:03:14.934657 [debug] [Thread-5 (]: Began compiling node test.logiflow.unique_dim_date_date_key.0869fd48f9
+[0m13:03:14.939563 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.unique_dim_date_date_key.0869fd48f9"
+[0m13:03:14.941245 [debug] [Thread-5 (]: Began executing node test.logiflow.unique_dim_date_date_key.0869fd48f9
+[0m13:03:14.945053 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.unique_dim_date_date_key.0869fd48f9"
+[0m13:03:14.946515 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.unique_dim_date_date_key.0869fd48f9"
+[0m13:03:14.946990 [debug] [Thread-5 (]: On test.logiflow.unique_dim_date_date_key.0869fd48f9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_key as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_date
+where date_key is not null
+group by date_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_date_date_key.0869fd48f9"} */
+[0m13:03:14.994572 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.257 seconds
+[0m13:03:14.996449 [info ] [Thread-2 (]: 13 of 37 PASS unique_dim_date_date_day ......................................... [[32mPASS[0m in 0.28s]
+[0m13:03:14.996976 [debug] [Thread-2 (]: Finished running node test.logiflow.unique_dim_date_date_day.d56fd19199
+[0m13:03:14.997350 [debug] [Thread-2 (]: Began running node test.logiflow.not_null_dim_products_product_card_id.cd35533211
+[0m13:03:14.997784 [info ] [Thread-2 (]: 15 of 37 START test not_null_dim_products_product_card_id ...................... [RUN]
+[0m13:03:14.998272 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_date_date_day.d56fd19199, now test.logiflow.not_null_dim_products_product_card_id.cd35533211)
+[0m13:03:14.998643 [debug] [Thread-2 (]: Began compiling node test.logiflow.not_null_dim_products_product_card_id.cd35533211
+[0m13:03:15.002754 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.not_null_dim_products_product_card_id.cd35533211"
+[0m13:03:15.003754 [debug] [Thread-2 (]: Began executing node test.logiflow.not_null_dim_products_product_card_id.cd35533211
+[0m13:03:15.006472 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.not_null_dim_products_product_card_id.cd35533211"
+[0m13:03:15.007560 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.not_null_dim_products_product_card_id.cd35533211"
+[0m13:03:15.007895 [debug] [Thread-2 (]: On test.logiflow.not_null_dim_products_product_card_id.cd35533211: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_card_id
+from LOGIFLOW.DBT_DEV.dim_products
+where product_card_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_products_product_card_id.cd35533211"} */
+[0m13:03:15.053265 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.430 seconds
+[0m13:03:15.055154 [info ] [Thread-4 (]: 11 of 37 PASS not_null_dim_date_date_day ....................................... [[32mPASS[0m in 0.46s]
+[0m13:03:15.055688 [debug] [Thread-4 (]: Finished running node test.logiflow.not_null_dim_date_date_day.e3f312efb2
+[0m13:03:15.056055 [debug] [Thread-4 (]: Began running node test.logiflow.not_null_dim_products_product_key.a98dfddb9a
+[0m13:03:15.056468 [info ] [Thread-4 (]: 16 of 37 START test not_null_dim_products_product_key .......................... [RUN]
+[0m13:03:15.056939 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_date_date_day.e3f312efb2, now test.logiflow.not_null_dim_products_product_key.a98dfddb9a)
+[0m13:03:15.057301 [debug] [Thread-4 (]: Began compiling node test.logiflow.not_null_dim_products_product_key.a98dfddb9a
+[0m13:03:15.061415 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.not_null_dim_products_product_key.a98dfddb9a"
+[0m13:03:15.063372 [debug] [Thread-4 (]: Began executing node test.logiflow.not_null_dim_products_product_key.a98dfddb9a
+[0m13:03:15.066135 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.not_null_dim_products_product_key.a98dfddb9a"
+[0m13:03:15.067045 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.not_null_dim_products_product_key.a98dfddb9a"
+[0m13:03:15.067416 [debug] [Thread-4 (]: On test.logiflow.not_null_dim_products_product_key.a98dfddb9a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_key
+from LOGIFLOW.DBT_DEV.dim_products
+where product_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_products_product_key.a98dfddb9a"} */
+[0m13:03:15.228809 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.220 seconds
+[0m13:03:15.232228 [info ] [Thread-2 (]: 15 of 37 PASS not_null_dim_products_product_card_id ............................ [[32mPASS[0m in 0.23s]
+[0m13:03:15.233127 [debug] [Thread-2 (]: Finished running node test.logiflow.not_null_dim_products_product_card_id.cd35533211
+[0m13:03:15.233714 [debug] [Thread-2 (]: Began running node test.logiflow.unique_dim_products_product_card_id.e7d76b1be0
+[0m13:03:15.234564 [info ] [Thread-2 (]: 17 of 37 START test unique_dim_products_product_card_id ........................ [RUN]
+[0m13:03:15.235472 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_products_product_card_id.cd35533211, now test.logiflow.unique_dim_products_product_card_id.e7d76b1be0)
+[0m13:03:15.235992 [debug] [Thread-2 (]: Began compiling node test.logiflow.unique_dim_products_product_card_id.e7d76b1be0
+[0m13:03:15.241694 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.unique_dim_products_product_card_id.e7d76b1be0"
+[0m13:03:15.242919 [debug] [Thread-2 (]: Began executing node test.logiflow.unique_dim_products_product_card_id.e7d76b1be0
+[0m13:03:15.249345 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.unique_dim_products_product_card_id.e7d76b1be0"
+[0m13:03:15.251326 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.unique_dim_products_product_card_id.e7d76b1be0"
+[0m13:03:15.251870 [debug] [Thread-2 (]: On test.logiflow.unique_dim_products_product_card_id.e7d76b1be0: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    product_card_id as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_products
+where product_card_id is not null
+group by product_card_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_products_product_card_id.e7d76b1be0"} */
+[0m13:03:15.298478 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.351 seconds
+[0m13:03:15.299808 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.232 seconds
+[0m13:03:15.302709 [info ] [Thread-5 (]: 14 of 37 PASS unique_dim_date_date_key ......................................... [[32mPASS[0m in 0.37s]
+[0m13:03:15.304730 [info ] [Thread-4 (]: 16 of 37 PASS not_null_dim_products_product_key ................................ [[32mPASS[0m in 0.25s]
+[0m13:03:15.305307 [debug] [Thread-5 (]: Finished running node test.logiflow.unique_dim_date_date_key.0869fd48f9
+[0m13:03:15.305983 [debug] [Thread-4 (]: Finished running node test.logiflow.not_null_dim_products_product_key.a98dfddb9a
+[0m13:03:15.306557 [debug] [Thread-5 (]: Began running node test.logiflow.unique_dim_products_product_key.5837b56652
+[0m13:03:15.307078 [debug] [Thread-4 (]: Began running node test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m13:03:15.307638 [info ] [Thread-5 (]: 18 of 37 START test unique_dim_products_product_key ............................ [RUN]
+[0m13:03:15.308084 [info ] [Thread-4 (]: 19 of 37 START test not_null_dim_customers_customer_id ......................... [RUN]
+[0m13:03:15.308591 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_date_date_key.0869fd48f9, now test.logiflow.unique_dim_products_product_key.5837b56652)
+[0m13:03:15.308979 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_products_product_key.a98dfddb9a, now test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d)
+[0m13:03:15.309335 [debug] [Thread-5 (]: Began compiling node test.logiflow.unique_dim_products_product_key.5837b56652
+[0m13:03:15.309709 [debug] [Thread-4 (]: Began compiling node test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m13:03:15.314039 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.unique_dim_products_product_key.5837b56652"
+[0m13:03:15.318245 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m13:03:15.319273 [debug] [Thread-4 (]: Began executing node test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m13:03:15.319594 [debug] [Thread-5 (]: Began executing node test.logiflow.unique_dim_products_product_key.5837b56652
+[0m13:03:15.322382 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m13:03:15.324768 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.unique_dim_products_product_key.5837b56652"
+[0m13:03:15.326238 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.unique_dim_products_product_key.5837b56652"
+[0m13:03:15.326776 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d"
+[0m13:03:15.327212 [debug] [Thread-5 (]: On test.logiflow.unique_dim_products_product_key.5837b56652: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    product_key as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_products
+where product_key is not null
+group by product_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_products_product_key.5837b56652"} */
+[0m13:03:15.327615 [debug] [Thread-4 (]: On test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from LOGIFLOW.DBT_DEV.dim_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d"} */
+[0m13:03:15.373892 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.122 seconds
+[0m13:03:15.375442 [info ] [Thread-2 (]: 17 of 37 PASS unique_dim_products_product_card_id .............................. [[32mPASS[0m in 0.14s]
+[0m13:03:15.376112 [debug] [Thread-2 (]: Finished running node test.logiflow.unique_dim_products_product_card_id.e7d76b1be0
+[0m13:03:15.376457 [debug] [Thread-2 (]: Began running node test.logiflow.not_null_dim_customers_customer_key.4bebfb3411
+[0m13:03:15.376751 [info ] [Thread-2 (]: 20 of 37 START test not_null_dim_customers_customer_key ........................ [RUN]
+[0m13:03:15.377063 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_products_product_card_id.e7d76b1be0, now test.logiflow.not_null_dim_customers_customer_key.4bebfb3411)
+[0m13:03:15.377371 [debug] [Thread-2 (]: Began compiling node test.logiflow.not_null_dim_customers_customer_key.4bebfb3411
+[0m13:03:15.380291 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.not_null_dim_customers_customer_key.4bebfb3411"
+[0m13:03:15.380841 [debug] [Thread-2 (]: Began executing node test.logiflow.not_null_dim_customers_customer_key.4bebfb3411
+[0m13:03:15.382779 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.not_null_dim_customers_customer_key.4bebfb3411"
+[0m13:03:15.384202 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.not_null_dim_customers_customer_key.4bebfb3411"
+[0m13:03:15.384505 [debug] [Thread-2 (]: On test.logiflow.not_null_dim_customers_customer_key.4bebfb3411: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_key
+from LOGIFLOW.DBT_DEV.dim_customers
+where customer_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_customers_customer_key.4bebfb3411"} */
+[0m13:03:15.472575 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.145 seconds
+[0m13:03:15.474708 [info ] [Thread-5 (]: 18 of 37 PASS unique_dim_products_product_key .................................. [[32mPASS[0m in 0.17s]
+[0m13:03:15.475505 [debug] [Thread-5 (]: Finished running node test.logiflow.unique_dim_products_product_key.5837b56652
+[0m13:03:15.475941 [debug] [Thread-5 (]: Began running node test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd
+[0m13:03:15.476434 [info ] [Thread-5 (]: 21 of 37 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m13:03:15.476919 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_products_product_key.5837b56652, now test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd)
+[0m13:03:15.477262 [debug] [Thread-5 (]: Began compiling node test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd
+[0m13:03:15.480908 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m13:03:15.481823 [debug] [Thread-5 (]: Began executing node test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd
+[0m13:03:15.484368 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m13:03:15.485405 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd"
+[0m13:03:15.485714 [debug] [Thread-5 (]: On test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd"} */
+[0m13:03:15.573231 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.188 seconds
+[0m13:03:15.575725 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.247 seconds
+[0m13:03:15.575160 [info ] [Thread-2 (]: 20 of 37 PASS not_null_dim_customers_customer_key .............................. [[32mPASS[0m in 0.20s]
+[0m13:03:15.577358 [info ] [Thread-4 (]: 19 of 37 PASS not_null_dim_customers_customer_id ............................... [[32mPASS[0m in 0.27s]
+[0m13:03:15.577889 [debug] [Thread-2 (]: Finished running node test.logiflow.not_null_dim_customers_customer_key.4bebfb3411
+[0m13:03:15.578308 [debug] [Thread-4 (]: Finished running node test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d
+[0m13:03:15.578657 [debug] [Thread-2 (]: Began running node test.logiflow.unique_dim_customers_customer_key.ad8156656e
+[0m13:03:15.579039 [debug] [Thread-4 (]: Began running node test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55
+[0m13:03:15.579384 [info ] [Thread-2 (]: 22 of 37 START test unique_dim_customers_customer_key .......................... [RUN]
+[0m13:03:15.579729 [info ] [Thread-4 (]: 23 of 37 START test not_null_fct_order_items_order_item_id ..................... [RUN]
+[0m13:03:15.580084 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_customers_customer_key.4bebfb3411, now test.logiflow.unique_dim_customers_customer_key.ad8156656e)
+[0m13:03:15.580400 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_customers_customer_id.dd91cd1c8d, now test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55)
+[0m13:03:15.580693 [debug] [Thread-2 (]: Began compiling node test.logiflow.unique_dim_customers_customer_key.ad8156656e
+[0m13:03:15.580950 [debug] [Thread-4 (]: Began compiling node test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55
+[0m13:03:15.584156 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.unique_dim_customers_customer_key.ad8156656e"
+[0m13:03:15.587437 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55"
+[0m13:03:15.588116 [debug] [Thread-2 (]: Began executing node test.logiflow.unique_dim_customers_customer_key.ad8156656e
+[0m13:03:15.590249 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.unique_dim_customers_customer_key.ad8156656e"
+[0m13:03:15.590602 [debug] [Thread-4 (]: Began executing node test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55
+[0m13:03:15.592561 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55"
+[0m13:03:15.593202 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.unique_dim_customers_customer_key.ad8156656e"
+[0m13:03:15.593513 [debug] [Thread-2 (]: On test.logiflow.unique_dim_customers_customer_key.ad8156656e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_key as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_customers
+where customer_key is not null
+group by customer_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_customers_customer_key.ad8156656e"} */
+[0m13:03:15.594148 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55"
+[0m13:03:15.594418 [debug] [Thread-4 (]: On test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_item_id
+from LOGIFLOW.DBT_DEV.fct_order_items
+where order_item_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55"} */
+[0m13:03:15.753223 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.267 seconds
+[0m13:03:15.753866 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.160 seconds
+[0m13:03:15.755504 [info ] [Thread-5 (]: 21 of 37 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 0.28s]
+[0m13:03:15.756948 [info ] [Thread-2 (]: 22 of 37 PASS unique_dim_customers_customer_key ................................ [[32mPASS[0m in 0.18s]
+[0m13:03:15.757389 [debug] [Thread-5 (]: Finished running node test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd
+[0m13:03:15.757736 [debug] [Thread-2 (]: Finished running node test.logiflow.unique_dim_customers_customer_key.ad8156656e
+[0m13:03:15.758033 [debug] [Thread-5 (]: Began running node test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3
+[0m13:03:15.758404 [debug] [Thread-2 (]: Began running node test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b
+[0m13:03:15.758790 [info ] [Thread-5 (]: 24 of 37 START test relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_  [RUN]
+[0m13:03:15.759161 [info ] [Thread-2 (]: 25 of 37 START test relationships_fct_order_items_order_date_key__date_key__ref_dim_date_  [RUN]
+[0m13:03:15.759541 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_customers_customer_id.15c9f1e2fd, now test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3)
+[0m13:03:15.759866 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_customers_customer_key.ad8156656e, now test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b)
+[0m13:03:15.760169 [debug] [Thread-5 (]: Began compiling node test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3
+[0m13:03:15.760436 [debug] [Thread-2 (]: Began compiling node test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b
+[0m13:03:15.766221 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3"
+[0m13:03:15.770018 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b"
+[0m13:03:15.770682 [debug] [Thread-5 (]: Began executing node test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3
+[0m13:03:15.772809 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3"
+[0m13:03:15.773186 [debug] [Thread-2 (]: Began executing node test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b
+[0m13:03:15.775217 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b"
+[0m13:03:15.775899 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3"
+[0m13:03:15.776455 [debug] [Thread-5 (]: On test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_key as from_field
+    from LOGIFLOW.DBT_DEV.fct_order_items
+    where customer_key is not null
+),
+
+parent as (
+    select customer_key as to_field
+    from LOGIFLOW.DBT_DEV.dim_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3"} */
+[0m13:03:15.777326 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b"
+[0m13:03:15.777986 [debug] [Thread-2 (]: On test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select order_date_key as from_field
+    from LOGIFLOW.DBT_DEV.fct_order_items
+    where order_date_key is not null
+),
+
+parent as (
+    select date_key as to_field
+    from LOGIFLOW.DBT_DEV.dim_date
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b"} */
+[0m13:03:15.825246 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.230 seconds
+[0m13:03:15.826786 [info ] [Thread-4 (]: 23 of 37 PASS not_null_fct_order_items_order_item_id ........................... [[32mPASS[0m in 0.25s]
+[0m13:03:15.827205 [debug] [Thread-4 (]: Finished running node test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55
+[0m13:03:15.827516 [debug] [Thread-4 (]: Began running node test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704
+[0m13:03:15.827840 [info ] [Thread-4 (]: 26 of 37 START test relationships_fct_order_items_product_key__product_key__ref_dim_products_  [RUN]
+[0m13:03:15.828209 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_fct_order_items_order_item_id.dbaab21f55, now test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704)
+[0m13:03:15.828493 [debug] [Thread-4 (]: Began compiling node test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704
+[0m13:03:15.832456 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704"
+[0m13:03:15.833050 [debug] [Thread-4 (]: Began executing node test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704
+[0m13:03:15.835116 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704"
+[0m13:03:15.836106 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704"
+[0m13:03:15.836424 [debug] [Thread-4 (]: On test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select product_key as from_field
+    from LOGIFLOW.DBT_DEV.fct_order_items
+    where product_key is not null
+),
+
+parent as (
+    select product_key as to_field
+    from LOGIFLOW.DBT_DEV.dim_products
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704"} */
+[0m13:03:15.993115 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.214 seconds
+[0m13:03:15.995828 [info ] [Thread-2 (]: 25 of 37 PASS relationships_fct_order_items_order_date_key__date_key__ref_dim_date_  [[32mPASS[0m in 0.24s]
+[0m13:03:15.996537 [debug] [Thread-2 (]: Finished running node test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b
+[0m13:03:15.997015 [debug] [Thread-2 (]: Began running node test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768
+[0m13:03:15.997433 [info ] [Thread-2 (]: 27 of 37 START test unique_fct_order_items_order_item_id ....................... [RUN]
+[0m13:03:15.998078 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.relationships_fct_order_items_order_date_key__date_key__ref_dim_date_.7e9a54838b, now test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768)
+[0m13:03:15.998570 [debug] [Thread-2 (]: Began compiling node test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768
+[0m13:03:16.002777 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768"
+[0m13:03:16.003656 [debug] [Thread-2 (]: Began executing node test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768
+[0m13:03:16.006410 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768"
+[0m13:03:16.007662 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768"
+[0m13:03:16.008012 [debug] [Thread-2 (]: On test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_item_id as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.fct_order_items
+where order_item_id is not null
+group by order_item_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768"} */
+[0m13:03:16.139750 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.363 seconds
+[0m13:03:16.144197 [info ] [Thread-5 (]: 24 of 37 PASS relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_  [[32mPASS[0m in 0.38s]
+[0m13:03:16.145064 [debug] [Thread-5 (]: Finished running node test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3
+[0m13:03:16.145503 [debug] [Thread-5 (]: Began running node test.logiflow.not_null_dim_zones_location_id.cbf42e7b79
+[0m13:03:16.146020 [info ] [Thread-5 (]: 28 of 37 START test not_null_dim_zones_location_id ............................. [RUN]
+[0m13:03:16.146518 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.relationships_fct_order_items_customer_key__customer_key__ref_dim_customers_.0e2d1a18f3, now test.logiflow.not_null_dim_zones_location_id.cbf42e7b79)
+[0m13:03:16.146963 [debug] [Thread-5 (]: Began compiling node test.logiflow.not_null_dim_zones_location_id.cbf42e7b79
+[0m13:03:16.151477 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.not_null_dim_zones_location_id.cbf42e7b79"
+[0m13:03:16.152816 [debug] [Thread-5 (]: Began executing node test.logiflow.not_null_dim_zones_location_id.cbf42e7b79
+[0m13:03:16.156614 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.not_null_dim_zones_location_id.cbf42e7b79"
+[0m13:03:16.158054 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.not_null_dim_zones_location_id.cbf42e7b79"
+[0m13:03:16.158681 [debug] [Thread-5 (]: On test.logiflow.not_null_dim_zones_location_id.cbf42e7b79: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select location_id
+from LOGIFLOW.DBT_DEV.dim_zones
+where location_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_zones_location_id.cbf42e7b79"} */
+[0m13:03:16.318674 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.310 seconds
+[0m13:03:16.321014 [info ] [Thread-2 (]: 27 of 37 PASS unique_fct_order_items_order_item_id ............................. [[32mPASS[0m in 0.32s]
+[0m13:03:16.321604 [debug] [Thread-2 (]: Finished running node test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768
+[0m13:03:16.321996 [debug] [Thread-2 (]: Began running node test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8
+[0m13:03:16.322418 [info ] [Thread-2 (]: 29 of 37 START test not_null_dim_zones_zone_key ................................ [RUN]
+[0m13:03:16.322838 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_fct_order_items_order_item_id.0dec5f6768, now test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8)
+[0m13:03:16.323155 [debug] [Thread-2 (]: Began compiling node test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8
+[0m13:03:16.326905 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8"
+[0m13:03:16.327687 [debug] [Thread-2 (]: Began executing node test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8
+[0m13:03:16.330127 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8"
+[0m13:03:16.331066 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8"
+[0m13:03:16.331422 [debug] [Thread-2 (]: On test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select zone_key
+from LOGIFLOW.DBT_DEV.dim_zones
+where zone_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8"} */
+[0m13:03:16.361118 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.202 seconds
+[0m13:03:16.363077 [info ] [Thread-5 (]: 28 of 37 PASS not_null_dim_zones_location_id ................................... [[32mPASS[0m in 0.22s]
+[0m13:03:16.363580 [debug] [Thread-5 (]: Finished running node test.logiflow.not_null_dim_zones_location_id.cbf42e7b79
+[0m13:03:16.363934 [debug] [Thread-5 (]: Began running node test.logiflow.unique_dim_zones_location_id.5aa0ad7f27
+[0m13:03:16.364334 [info ] [Thread-5 (]: 30 of 37 START test unique_dim_zones_location_id ............................... [RUN]
+[0m13:03:16.364907 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_zones_location_id.cbf42e7b79, now test.logiflow.unique_dim_zones_location_id.5aa0ad7f27)
+[0m13:03:16.365415 [debug] [Thread-5 (]: Began compiling node test.logiflow.unique_dim_zones_location_id.5aa0ad7f27
+[0m13:03:16.369235 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.unique_dim_zones_location_id.5aa0ad7f27"
+[0m13:03:16.370258 [debug] [Thread-5 (]: Began executing node test.logiflow.unique_dim_zones_location_id.5aa0ad7f27
+[0m13:03:16.372951 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.unique_dim_zones_location_id.5aa0ad7f27"
+[0m13:03:16.374098 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.unique_dim_zones_location_id.5aa0ad7f27"
+[0m13:03:16.374437 [debug] [Thread-5 (]: On test.logiflow.unique_dim_zones_location_id.5aa0ad7f27: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    location_id as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_zones
+where location_id is not null
+group by location_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_zones_location_id.5aa0ad7f27"} */
+[0m13:03:16.390285 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.554 seconds
+[0m13:03:16.392150 [info ] [Thread-4 (]: 26 of 37 PASS relationships_fct_order_items_product_key__product_key__ref_dim_products_  [[32mPASS[0m in 0.56s]
+[0m13:03:16.393064 [debug] [Thread-4 (]: Finished running node test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704
+[0m13:03:16.393413 [debug] [Thread-4 (]: Began running node test.logiflow.unique_dim_zones_zone_key.fca312d0ce
+[0m13:03:16.393756 [info ] [Thread-4 (]: 31 of 37 START test unique_dim_zones_zone_key .................................. [RUN]
+[0m13:03:16.394109 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.relationships_fct_order_items_product_key__product_key__ref_dim_products_.6ba41d7704, now test.logiflow.unique_dim_zones_zone_key.fca312d0ce)
+[0m13:03:16.394409 [debug] [Thread-4 (]: Began compiling node test.logiflow.unique_dim_zones_zone_key.fca312d0ce
+[0m13:03:16.397752 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.unique_dim_zones_zone_key.fca312d0ce"
+[0m13:03:16.398831 [debug] [Thread-4 (]: Began executing node test.logiflow.unique_dim_zones_zone_key.fca312d0ce
+[0m13:03:16.401150 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.unique_dim_zones_zone_key.fca312d0ce"
+[0m13:03:16.402231 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.unique_dim_zones_zone_key.fca312d0ce"
+[0m13:03:16.402603 [debug] [Thread-4 (]: On test.logiflow.unique_dim_zones_zone_key.fca312d0ce: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    zone_key as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.dim_zones
+where zone_key is not null
+group by zone_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_dim_zones_zone_key.fca312d0ce"} */
+[0m13:03:16.522494 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.120 seconds
+[0m13:03:16.523985 [info ] [Thread-4 (]: 31 of 37 PASS unique_dim_zones_zone_key ........................................ [[32mPASS[0m in 0.13s]
+[0m13:03:16.524341 [debug] [Thread-4 (]: Finished running node test.logiflow.unique_dim_zones_zone_key.fca312d0ce
+[0m13:03:16.524599 [debug] [Thread-4 (]: Began running node test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250
+[0m13:03:16.524891 [info ] [Thread-4 (]: 32 of 37 START test accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time  [RUN]
+[0m13:03:16.525229 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_zones_zone_key.fca312d0ce, now test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250)
+[0m13:03:16.525489 [debug] [Thread-4 (]: Began compiling node test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250
+[0m13:03:16.531009 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250"
+[0m13:03:16.531847 [debug] [Thread-4 (]: Began executing node test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250
+[0m13:03:16.533831 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250"
+[0m13:03:16.534708 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.203 seconds
+[0m13:03:16.535987 [info ] [Thread-2 (]: 29 of 37 PASS not_null_dim_zones_zone_key ...................................... [[32mPASS[0m in 0.21s]
+[0m13:03:16.536559 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250"
+[0m13:03:16.536894 [debug] [Thread-2 (]: Finished running node test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8
+[0m13:03:16.537174 [debug] [Thread-4 (]: On test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        delivery_status as value_field,
+        count(*) as n_records
+
+    from LOGIFLOW.DBT_DEV.fct_shipments
+    group by delivery_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Advance shipping','Late delivery','Shipping canceled','Shipping on time'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250"} */
+[0m13:03:16.537450 [debug] [Thread-2 (]: Began running node test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b
+[0m13:03:16.537866 [info ] [Thread-2 (]: 33 of 37 START test accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class  [RUN]
+[0m13:03:16.538233 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_dim_zones_zone_key.aa6e0020a8, now test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b)
+[0m13:03:16.538484 [debug] [Thread-2 (]: Began compiling node test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b
+[0m13:03:16.542335 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b"
+[0m13:03:16.543147 [debug] [Thread-2 (]: Began executing node test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b
+[0m13:03:16.545994 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b"
+[0m13:03:16.546816 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b"
+[0m13:03:16.547056 [debug] [Thread-2 (]: On test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        shipping_mode as value_field,
+        count(*) as n_records
+
+    from LOGIFLOW.DBT_DEV.fct_shipments
+    group by shipping_mode
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'First Class','Same Day','Second Class','Standard Class'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b"} */
+[0m13:03:16.623716 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.249 seconds
+[0m13:03:16.625097 [info ] [Thread-5 (]: 30 of 37 PASS unique_dim_zones_location_id ..................................... [[32mPASS[0m in 0.26s]
+[0m13:03:16.625484 [debug] [Thread-5 (]: Finished running node test.logiflow.unique_dim_zones_location_id.5aa0ad7f27
+[0m13:03:16.625763 [debug] [Thread-5 (]: Began running node test.logiflow.not_null_fct_shipments_order_id.31824196fb
+[0m13:03:16.626053 [info ] [Thread-5 (]: 34 of 37 START test not_null_fct_shipments_order_id ............................ [RUN]
+[0m13:03:16.626394 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.unique_dim_zones_location_id.5aa0ad7f27, now test.logiflow.not_null_fct_shipments_order_id.31824196fb)
+[0m13:03:16.626648 [debug] [Thread-5 (]: Began compiling node test.logiflow.not_null_fct_shipments_order_id.31824196fb
+[0m13:03:16.629438 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.not_null_fct_shipments_order_id.31824196fb"
+[0m13:03:16.630307 [debug] [Thread-5 (]: Began executing node test.logiflow.not_null_fct_shipments_order_id.31824196fb
+[0m13:03:16.632460 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.not_null_fct_shipments_order_id.31824196fb"
+[0m13:03:16.633389 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.not_null_fct_shipments_order_id.31824196fb"
+[0m13:03:16.633735 [debug] [Thread-5 (]: On test.logiflow.not_null_fct_shipments_order_id.31824196fb: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from LOGIFLOW.DBT_DEV.fct_shipments
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.not_null_fct_shipments_order_id.31824196fb"} */
+[0m13:03:16.802722 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.265 seconds
+[0m13:03:16.803319 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.256 seconds
+[0m13:03:16.804889 [info ] [Thread-4 (]: 32 of 37 PASS accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time  [[32mPASS[0m in 0.28s]
+[0m13:03:16.806106 [info ] [Thread-2 (]: 33 of 37 PASS accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class  [[32mPASS[0m in 0.27s]
+[0m13:03:16.806576 [debug] [Thread-4 (]: Finished running node test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250
+[0m13:03:16.806965 [debug] [Thread-2 (]: Finished running node test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b
+[0m13:03:16.807273 [debug] [Thread-4 (]: Began running node test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350
+[0m13:03:16.807608 [debug] [Thread-2 (]: Began running node test.logiflow.unique_fct_shipments_order_id.06ecab9d2b
+[0m13:03:16.807938 [info ] [Thread-4 (]: 35 of 37 START test relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_  [RUN]
+[0m13:03:16.808234 [info ] [Thread-2 (]: 36 of 37 START test unique_fct_shipments_order_id .............................. [RUN]
+[0m13:03:16.808552 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.logiflow.accepted_values_fct_shipments_delivery_status__Advance_shipping__Late_delivery__Shipping_canceled__Shipping_on_time.9d608f4250, now test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350)
+[0m13:03:16.808838 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.logiflow.accepted_values_fct_shipments_shipping_mode__First_Class__Same_Day__Second_Class__Standard_Class.eff53d5c1b, now test.logiflow.unique_fct_shipments_order_id.06ecab9d2b)
+[0m13:03:16.809112 [debug] [Thread-4 (]: Began compiling node test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350
+[0m13:03:16.809363 [debug] [Thread-2 (]: Began compiling node test.logiflow.unique_fct_shipments_order_id.06ecab9d2b
+[0m13:03:16.813173 [debug] [Thread-4 (]: Writing injected SQL for node "test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350"
+[0m13:03:16.815703 [debug] [Thread-2 (]: Writing injected SQL for node "test.logiflow.unique_fct_shipments_order_id.06ecab9d2b"
+[0m13:03:16.816670 [debug] [Thread-4 (]: Began executing node test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350
+[0m13:03:16.818854 [debug] [Thread-4 (]: Writing runtime sql for node "test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350"
+[0m13:03:16.819192 [debug] [Thread-2 (]: Began executing node test.logiflow.unique_fct_shipments_order_id.06ecab9d2b
+[0m13:03:16.821063 [debug] [Thread-2 (]: Writing runtime sql for node "test.logiflow.unique_fct_shipments_order_id.06ecab9d2b"
+[0m13:03:16.821716 [debug] [Thread-4 (]: Using snowflake connection "test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350"
+[0m13:03:16.822039 [debug] [Thread-4 (]: On test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_key as from_field
+    from LOGIFLOW.DBT_DEV.fct_shipments
+    where customer_key is not null
+),
+
+parent as (
+    select customer_key as to_field
+    from LOGIFLOW.DBT_DEV.dim_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350"} */
+[0m13:03:16.822685 [debug] [Thread-2 (]: Using snowflake connection "test.logiflow.unique_fct_shipments_order_id.06ecab9d2b"
+[0m13:03:16.823099 [debug] [Thread-2 (]: On test.logiflow.unique_fct_shipments_order_id.06ecab9d2b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from LOGIFLOW.DBT_DEV.fct_shipments
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.unique_fct_shipments_order_id.06ecab9d2b"} */
+[0m13:03:16.841664 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.208 seconds
+[0m13:03:16.843034 [info ] [Thread-5 (]: 34 of 37 PASS not_null_fct_shipments_order_id .................................. [[32mPASS[0m in 0.22s]
+[0m13:03:16.843425 [debug] [Thread-5 (]: Finished running node test.logiflow.not_null_fct_shipments_order_id.31824196fb
+[0m13:03:16.974946 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.151 seconds
+[0m13:03:16.977708 [info ] [Thread-2 (]: 36 of 37 PASS unique_fct_shipments_order_id .................................... [[32mPASS[0m in 0.17s]
+[0m13:03:16.978423 [debug] [Thread-2 (]: Finished running node test.logiflow.unique_fct_shipments_order_id.06ecab9d2b
+[0m13:03:17.187603 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.365 seconds
+[0m13:03:17.191123 [info ] [Thread-4 (]: 35 of 37 PASS relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_  [[32mPASS[0m in 0.38s]
+[0m13:03:17.192046 [debug] [Thread-4 (]: Finished running node test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350
+[0m13:03:22.301634 [debug] [Thread-3 (]: SQL status: SUCCESS 9212602 in 8.263 seconds
+[0m13:03:22.312585 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9d52d2b-0e7c-43d3-93d5-fe6413ac9cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1226d1090>]}
+[0m13:03:22.338961 [info ] [Thread-3 (]: 10 of 37 OK created sql table model DBT_DEV.fct_trips .......................... [[32mSUCCESS 9212602[0m in 8.29s]
+[0m13:03:22.376837 [debug] [Thread-3 (]: Finished running node model.logiflow.fct_trips
+[0m13:03:22.398323 [debug] [Thread-5 (]: Began running node test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6
+[0m13:03:22.399745 [info ] [Thread-5 (]: 37 of 37 START test relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_  [RUN]
+[0m13:03:22.400342 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.logiflow.not_null_fct_shipments_order_id.31824196fb, now test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6)
+[0m13:03:22.400677 [debug] [Thread-5 (]: Began compiling node test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6
+[0m13:03:22.406727 [debug] [Thread-5 (]: Writing injected SQL for node "test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6"
+[0m13:03:22.407574 [debug] [Thread-5 (]: Began executing node test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6
+[0m13:03:22.411843 [debug] [Thread-5 (]: Writing runtime sql for node "test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6"
+[0m13:03:22.413322 [debug] [Thread-5 (]: Using snowflake connection "test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6"
+[0m13:03:22.413625 [debug] [Thread-5 (]: On test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select pickup_zone_key as from_field
+    from LOGIFLOW.DBT_DEV.fct_trips
+    where pickup_zone_key is not null
+),
+
+parent as (
+    select zone_key as to_field
+    from LOGIFLOW.DBT_DEV.dim_zones
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "logiflow", "target_name": "dev", "node_id": "test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6"} */
+[0m13:03:23.099839 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.686 seconds
+[0m13:03:23.102434 [info ] [Thread-5 (]: 37 of 37 PASS relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_  [[32mPASS[0m in 0.70s]
+[0m13:03:23.102925 [debug] [Thread-5 (]: Finished running node test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6
+[0m13:03:23.105026 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:03:23.105359 [debug] [MainThread]: Connection 'test.logiflow.unique_fct_shipments_order_id.06ecab9d2b' was left open.
+[0m13:03:23.105617 [debug] [MainThread]: On test.logiflow.unique_fct_shipments_order_id.06ecab9d2b: Close
+[0m13:03:23.223299 [debug] [MainThread]: Connection 'model.logiflow.fct_trips' was left open.
+[0m13:03:23.223822 [debug] [MainThread]: On model.logiflow.fct_trips: Close
+[0m13:03:23.431079 [debug] [MainThread]: Connection 'test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350' was left open.
+[0m13:03:23.432240 [debug] [MainThread]: On test.logiflow.relationships_fct_shipments_customer_key__customer_key__ref_dim_customers_.4cd28a8350: Close
+[0m13:03:23.619055 [debug] [MainThread]: Connection 'test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6' was left open.
+[0m13:03:23.619460 [debug] [MainThread]: On test.logiflow.relationships_fct_trips_pickup_zone_key__zone_key__ref_dim_zones_.c167f9aab6: Close
+[0m13:03:23.901976 [info ] [MainThread]: 
+[0m13:03:23.902736 [info ] [MainThread]: Finished running 7 table models, 27 data tests, 3 view models in 0 hours 0 minutes and 14.37 seconds (14.37s).
+[0m13:03:23.906955 [debug] [MainThread]: Command end result
+[0m13:03:23.939618 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/yuwang/Desktop/logistics_data/dbt/target/manifest.json
+[0m13:03:23.942366 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/yuwang/Desktop/logistics_data/dbt/target/semantic_manifest.json
+[0m13:03:23.948308 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/yuwang/Desktop/logistics_data/dbt/target/run_results.json
+[0m13:03:23.948676 [info ] [MainThread]: 
+[0m13:03:23.948950 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:03:23.949179 [info ] [MainThread]: 
+[0m13:03:23.949415 [info ] [MainThread]: Done. PASS=37 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=37
+[0m13:03:23.953043 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 15.60362, "process_in_blocks": "0", "process_kernel_time": 0.523457, "process_mem_max_rss": "229392384", "process_out_blocks": "0", "process_user_time": 2.430417}
+[0m13:03:23.953554 [debug] [MainThread]: Command `dbt build` succeeded at 13:03:23.953498 after 15.60 seconds
+[0m13:03:23.953918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103989d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103b7e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107667f50>]}
+[0m13:03:23.954173 [debug] [MainThread]: Flushing usage events
+[0m13:03:24.383593 [debug] [MainThread]: An error was encountered while trying to flush usage events

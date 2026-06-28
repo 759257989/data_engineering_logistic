@@ -5,3 +5,4 @@ openpyxl      # 读 .xlsx
 boto3                  # AWS 官方 Python SDK,用来传文件到 S3
 snowflake-connector-python   # 用 Python 连 Snowflake 跑 SQL
 python-dotenv
+dbt-snowflake 

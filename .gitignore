@@ -14,3 +14,11 @@ __pycache__/
 .ipynb_checkpoints/
 
 phase/
+
+# Airflow
+.venv-airflow/
+airflow/logs/
+airflow/*.db
+airflow/*.cfg
+airflow/*.generated
+airflow/simple_auth_manager_passwords.json.generated
